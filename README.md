@@ -28,7 +28,7 @@ to your `.vimrc`. If you enable the autocommand in this manner and want to
 disable it for a given session, run the command `:unlet g:trimmer_autocommand`.
 
 To opt certain filetypes out of the autocommand, add them to the blacklist
-array like so: `let g:trimmer_blacklist = ['markdown', 'make']. You can still
+array like so: `let g:trimmer_blacklist = ['markdown', 'make']`. You can still
 run the `TrimTrailingWhitespace` function manually on blacklisted filetypes.
 
 [v]:https://github.com/gmarik/vundle
