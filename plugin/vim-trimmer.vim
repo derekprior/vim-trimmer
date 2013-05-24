@@ -2,10 +2,10 @@ if !exists("g:trimmer_blacklist")
   let g:trimmer_blacklist = []
 endif
 
-autocmd BufWritePre *
-  \ if exists("g:trimmer_autocommand") |
-  \   call s:TrimTrailingWhitespace(g:trimmer_blacklist) |
-  \ endif
+augroup vimTrimmer
+  autocmd!
+  autocmd BufWritePre * call s:TrimTrailingWhitespace(g:trimmer_blacklist)
+end
 
 function! s:TrimTrailingWhitespace(blacklist)
   if index(a:blacklist, &ft) < 0
@@ -14,5 +14,3 @@ function! s:TrimTrailingWhitespace(blacklist)
     call setpos(".", l:pos)
   endif
 endfunction
-
-command! TrimTrailingWhitespace call s:TrimTrailingWhitespace([])
