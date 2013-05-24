@@ -1,9 +1,9 @@
 # vim-trimmer
 
 A super-simple vim plugin that:
-* Adds an auto-command that trims trailing whitespace on buffer write while
+* Adds an autocmd that trims trailing whitespace on buffer write while
   preserving cursor position.
-* Optionally disables the autocommand for specified blacklisted filetypes (see
+* Optionally disables the autocmd for specified blacklisted filetypes (see
   configuration).
 
 ## Installation

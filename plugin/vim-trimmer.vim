@@ -5,7 +5,7 @@ endif
 augroup vimTrimmer
   autocmd!
   autocmd BufWritePre * call s:TrimTrailingWhitespace(g:trimmer_blacklist)
-end
+augroup END
 
 function! s:TrimTrailingWhitespace(blacklist)
   if index(a:blacklist, &ft) < 0
