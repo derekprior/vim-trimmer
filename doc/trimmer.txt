@@ -19,8 +19,8 @@ CONTENTS                                            *TrimmerContents*
 Section 1: Introduction                         *TrimmerIntroduction*
 
 vim-trimmer is a little plugin that eliminates noisy, extraneous
-whitespace in your documents. It registers an *autocommand* on
-*BufPreWrite* to do its work.
+whitespace in your documents. It registers an autocommand on
+BufPreWrite to do its work.
 
 On write, the following whitespace will be eliminated:
 
@@ -32,7 +32,7 @@ On write, the following whitespace will be eliminated:
 Section 2: Configuration                       *TrimmerConfiguration*
 
 There are some filetypes (certain flavors of markdown, for instance)
-where trailing whitespace is meaningul. You can opt *filetypes* out of
+where trailing whitespace is meaningul. You can opt filetypes out of
 whitespace trimming with:
 
   let g:trimmer_blacklist = ['markdown']
