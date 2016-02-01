@@ -1,0 +1,41 @@
+*trimmer.txt* Plugin to kill extra whitespace
+
+  _______   _                                ~
+ |__   __| (_)                               ~
+    | |_ __ _ _ __ ___  _ __ ___   ___ _ __  ~
+    | | '__| | '_ ` _ \| '_ ` _ \ / _ \ '__| ~
+    | | |  | | | | | | | | | | | |  __/ |    ~
+    |_|_|  |_|_| |_| |_|_| |_| |_|\___|_|    ~
+                                             ~
+            Kill extra whitespace
+
+====================================================================
+CONTENTS                                            *TrimmerContents*
+
+    1. Introduction.............. |TrimmerIntroduction|
+    2. TrimmerConfiguration...... |TrimmerConfiguration|
+
+====================================================================
+Section 1: Introduction                         *TrimmerIntroduction*
+
+vim-trimmer is a little plugin that eliminates noisy, extraneous
+whitespace in your documents. It registers an *autocommand* on
+*BufPreWrite* to do its work.
+
+On write, the following whitespace will be eliminated:
+
+  1. Trailing whitespace on each line
+  2. Trailing newlines at the end of the file
+  3. Repeated empty lines in a file
+
+====================================================================
+Section 2: Configuration                       *TrimmerConfiguration*
+
+There are some filetypes (certain flavors of markdown, for instance)
+where trailing whitespace is meaningul. You can opt *filetypes* out of
+whitespace trimming with:
+
+  let g:trimmer_blacklist = ['markdown']
+
+====================================================================
+vim:tw=78:ft=help:norl:
