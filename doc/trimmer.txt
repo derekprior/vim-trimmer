@@ -25,8 +25,8 @@ BufPreWrite to do its work.
 On write, the following whitespace will be eliminated:
 
   1. Trailing whitespace on each line
-  2. Trailing newlines at the end of the file
-  3. Repeated empty lines in a file
+  2. Trailing newlines at the end of the file (optionally)
+  3. Repeated empty lines in a file (optionally)
 
 ====================================================================
 Section 2: Configuration                       *TrimmerConfiguration*
@@ -36,6 +36,16 @@ where trailing whitespace is meaningul. You can opt filetypes out of
 whitespace trimming with:
 
   let g:trimmer_blacklist = ['markdown']
+
+To trim repeated empty lines within a given whitelisted file set a
+global variable like so:
+
+  let g:trimmer_repeated_empty_lines = 1
+
+To trim empty lines at the end of a given whitelisted file set a
+global variable like so:
+
+  let g:trimmer_trailing_empty_lines = 1
 
 ====================================================================
 vim:tw=78:ft=help:norl:
