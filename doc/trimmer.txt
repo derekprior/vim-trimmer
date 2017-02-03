@@ -22,11 +22,7 @@ vim-trimmer is a little plugin that eliminates noisy, extraneous
 whitespace in your documents. It registers an autocommand on
 BufPreWrite to do its work.
 
-On write, the following whitespace will be eliminated:
-
-  1. Trailing whitespace on each line
-  2. Trailing newlines at the end of the file
-  3. Repeated empty lines in a file
+On write, trailing whitespace on each line is eliminated.
 
 ====================================================================
 Section 2: Configuration                       *TrimmerConfiguration*
