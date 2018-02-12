@@ -11,6 +11,7 @@ function! s:TrimTrailingWhitespace(blacklist)
   if index(a:blacklist, &filetype) < 0
     let l:pos = getpos('.')
     %s/\s\+$//e
+    call histdel('search', -1)
     call setpos('.', l:pos)
   endif
 endfunction
